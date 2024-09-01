@@ -17,6 +17,9 @@
 		25ED27B72C8455220004FCDF /* AttendencePartSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED27B62C8455220004FCDF /* AttendencePartSDKTests.swift */; };
 		25ED27C12C8455220004FCDF /* AttendencePartSDKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED27C02C8455220004FCDF /* AttendencePartSDKUITests.swift */; };
 		25ED27C32C8455220004FCDF /* AttendencePartSDKUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED27C22C8455220004FCDF /* AttendencePartSDKUITestsLaunchTests.swift */; };
+		25ED27D32C8457800004FCDF /* ExtractTextFromImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED27D22C8457800004FCDF /* ExtractTextFromImage.swift */; };
+		25ED27D52C8457980004FCDF /* DataManagement .swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED27D42C8457980004FCDF /* DataManagement .swift */; };
+		25ED27D72C8457D50004FCDF /* DateManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED27D62C8457D50004FCDF /* DateManagement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		25ED27BC2C8455220004FCDF /* AttendencePartSDKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttendencePartSDKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25ED27C02C8455220004FCDF /* AttendencePartSDKUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendencePartSDKUITests.swift; sourceTree = "<group>"; };
 		25ED27C22C8455220004FCDF /* AttendencePartSDKUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendencePartSDKUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		25ED27D22C8457800004FCDF /* ExtractTextFromImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractTextFromImage.swift; sourceTree = "<group>"; };
+		25ED27D42C8457980004FCDF /* DataManagement .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManagement .swift"; sourceTree = "<group>"; };
+		25ED27D62C8457D50004FCDF /* DateManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManagement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		25ED279B2C8455200004FCDF /* AttendencePartSDK */ = {
 			isa = PBXGroup;
 			children = (
+				25ED27D12C8456F30004FCDF /* Attendence_part  */,
 				25ED279C2C8455200004FCDF /* AppDelegate.swift */,
 				25ED279E2C8455200004FCDF /* SceneDelegate.swift */,
 				25ED27A02C8455200004FCDF /* ViewController.swift */,
@@ -128,6 +135,16 @@
 				25ED27C22C8455220004FCDF /* AttendencePartSDKUITestsLaunchTests.swift */,
 			);
 			path = AttendencePartSDKUITests;
+			sourceTree = "<group>";
+		};
+		25ED27D12C8456F30004FCDF /* Attendence_part  */ = {
+			isa = PBXGroup;
+			children = (
+				25ED27D22C8457800004FCDF /* ExtractTextFromImage.swift */,
+				25ED27D42C8457980004FCDF /* DataManagement .swift */,
+				25ED27D62C8457D50004FCDF /* DateManagement.swift */,
+			);
+			path = "Attendence_part ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,8 +278,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25ED27D32C8457800004FCDF /* ExtractTextFromImage.swift in Sources */,
 				25ED27A12C8455200004FCDF /* ViewController.swift in Sources */,
+				25ED27D72C8457D50004FCDF /* DateManagement.swift in Sources */,
 				25ED279D2C8455200004FCDF /* AppDelegate.swift in Sources */,
+				25ED27D52C8457980004FCDF /* DataManagement .swift in Sources */,
 				25ED27A72C8455200004FCDF /* AttendencePartSDK.xcdatamodeld in Sources */,
 				25ED279F2C8455200004FCDF /* SceneDelegate.swift in Sources */,
 			);
