@@ -7,13 +7,48 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, TextClassificationelegate {
+    func canextractdata(extracttext: String, xcordinated: String) {
+        print(extracttext)
+        
+         let timedataextractor = SecondDateManagement(extracttext: extracttext, xcordinated: xcordinated)
+         let finaltimelist = timedataextractor.processDate()
+         print(finaltimelist)
+         
+    }
+    
+    func cannotgetdata() {
+        print("VVVVVVV")
+    }
+    
+    var datalist: [String: [String]] = [:]
+    let textClassifier = TextClassification()
+    let datamanagement = DataManagement()
+    let timedatamanagement = TimeDataManagement()
+    let timecheUnderContraction = TimecheUnderContraction()
+    var maindata: [(key: String, value: [String])] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        textClassifier.delegate = self
     }
 
-
+    @IBAction func extract(_ sender: UIButton, forEvent event: UIEvent) {
+        if let image = UIImage(named: "2"),
+           let cgImage = image.cgImage {
+            print("KKKKKKK")
+           textClassifier.recognizeText(from: cgImage);
+        } else {
+            print("Image not found")
+        }
+    }
+    
 }
 
+/*
+ if let image = UIImage(named: "realimage_reed"),
+    let cgImage = image.cgImage {
+     textClassifier.recognizeText(from: cgImage);
+ } else {
+     print("Image not found")
+ }
+ */

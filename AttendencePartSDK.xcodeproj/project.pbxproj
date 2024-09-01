@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2518A4642C84594B004EFC0C /* TimeDataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518A4632C84594B004EFC0C /* TimeDataManagement.swift */; };
+		2518A4662C845961004EFC0C /* TimecheUnderContraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518A4652C845961004EFC0C /* TimecheUnderContraction.swift */; };
+		2518A4682C845A45004EFC0C /* FirstTimeManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518A4672C845A45004EFC0C /* FirstTimeManagement.swift */; };
+		2518A46A2C845A83004EFC0C /* SecondDateManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518A4692C845A83004EFC0C /* SecondDateManagement.swift */; };
 		25ED279D2C8455200004FCDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED279C2C8455200004FCDF /* AppDelegate.swift */; };
 		25ED279F2C8455200004FCDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED279E2C8455200004FCDF /* SceneDelegate.swift */; };
 		25ED27A12C8455200004FCDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED27A02C8455200004FCDF /* ViewController.swift */; };
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2518A4632C84594B004EFC0C /* TimeDataManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDataManagement.swift; sourceTree = "<group>"; };
+		2518A4652C845961004EFC0C /* TimecheUnderContraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimecheUnderContraction.swift; sourceTree = "<group>"; };
+		2518A4672C845A45004EFC0C /* FirstTimeManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeManagement.swift; sourceTree = "<group>"; };
+		2518A4692C845A83004EFC0C /* SecondDateManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDateManagement.swift; sourceTree = "<group>"; };
 		25ED27992C8455200004FCDF /* AttendencePartSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttendencePartSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25ED279C2C8455200004FCDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25ED279E2C8455200004FCDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +151,10 @@
 				25ED27D22C8457800004FCDF /* ExtractTextFromImage.swift */,
 				25ED27D42C8457980004FCDF /* DataManagement .swift */,
 				25ED27D62C8457D50004FCDF /* DateManagement.swift */,
+				2518A4632C84594B004EFC0C /* TimeDataManagement.swift */,
+				2518A4652C845961004EFC0C /* TimecheUnderContraction.swift */,
+				2518A4672C845A45004EFC0C /* FirstTimeManagement.swift */,
+				2518A4692C845A83004EFC0C /* SecondDateManagement.swift */,
 			);
 			path = "Attendence_part ";
 			sourceTree = "<group>";
@@ -278,8 +290,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2518A4662C845961004EFC0C /* TimecheUnderContraction.swift in Sources */,
+				2518A46A2C845A83004EFC0C /* SecondDateManagement.swift in Sources */,
 				25ED27D32C8457800004FCDF /* ExtractTextFromImage.swift in Sources */,
+				2518A4642C84594B004EFC0C /* TimeDataManagement.swift in Sources */,
 				25ED27A12C8455200004FCDF /* ViewController.swift in Sources */,
+				2518A4682C845A45004EFC0C /* FirstTimeManagement.swift in Sources */,
 				25ED27D72C8457D50004FCDF /* DateManagement.swift in Sources */,
 				25ED279D2C8455200004FCDF /* AppDelegate.swift in Sources */,
 				25ED27D52C8457980004FCDF /* DataManagement .swift in Sources */,

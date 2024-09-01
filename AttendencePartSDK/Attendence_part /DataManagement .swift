@@ -40,7 +40,7 @@ public class DataManagement {
         }
         return sortedDictionary
     }
-    static func createMapUsingSize(_ integerList: [Int], detector: Int) -> [String: [String]] {
+    static func createMapUsingSizzze(_ integerList: [Int], detector: Int) -> [String: [String]] {
         var xListMap: [String: [String]] = [:]
         var index = 0
         var i = 0
@@ -59,5 +59,28 @@ public class DataManagement {
         }
         return xListMap
     }
-   
+    static func createMapUsingSize(_ integerList: [Int], detector: Int) -> [String: [String]] {
+        var xListMap: [String: [String]] = [:]
+        var index = 0
+        var i = 0
+        
+        while i < integerList.count {
+            var currentGroup: [String] = []
+            let startValue = integerList[i]
+            currentGroup.append(String(startValue))
+            
+            // Group consecutive values within the detector range
+            while i + 1 < integerList.count && abs(integerList[i + 1] - startValue) <= detector {
+                i += 1
+                currentGroup.append(String(integerList[i]))
+            }
+            
+            xListMap[String(index)] = currentGroup
+            index += 1
+            i += 1
+        }
+        
+        return xListMap
+    }
+
 }
