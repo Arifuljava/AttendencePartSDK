@@ -31,7 +31,9 @@ class ViewController: UIViewController, TextClassificationelegate {
         super.viewDidLoad()
         textClassifier.delegate = self
     }
-
+    func arif(){
+        
+    }
     @IBAction func extract(_ sender: UIButton, forEvent event: UIEvent) {
         if let image = UIImage(named: "8"),
            let cgImage = image.cgImage {
