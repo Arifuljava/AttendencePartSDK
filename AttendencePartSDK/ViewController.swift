@@ -33,7 +33,7 @@ class ViewController: UIViewController, TextClassificationelegate {
     }
 
     @IBAction func extract(_ sender: UIButton, forEvent event: UIEvent) {
-        if let image = UIImage(named: "2"),
+        if let image = UIImage(named: "8"),
            let cgImage = image.cgImage {
            textClassifier.recognizeText(from: cgImage);
         } else {
