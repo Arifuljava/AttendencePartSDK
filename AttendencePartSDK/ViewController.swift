@@ -35,7 +35,6 @@ class ViewController: UIViewController, TextClassificationelegate {
     @IBAction func extract(_ sender: UIButton, forEvent event: UIEvent) {
         if let image = UIImage(named: "2"),
            let cgImage = image.cgImage {
-            print("KKKKKKK")
            textClassifier.recognizeText(from: cgImage);
         } else {
             print("Image not found")

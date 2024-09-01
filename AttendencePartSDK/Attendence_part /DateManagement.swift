@@ -290,13 +290,10 @@ public class DateManagement{
       var kk = detector
       var dateChecking = [String]()
       var mainKey = 0
-      print(datelistResult)
       for i in 0...15 {
           let key = String(mainKey)
           if let entry = datelistResult.first(where: { $0.key == key }) {
               let dates = entry.value
-              print("mainKey \(kk)   dates  \(dates)")
-              
               var element = ""
               if kk < 10 {
                   element = "0\(kk)"

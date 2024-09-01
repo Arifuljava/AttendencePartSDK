@@ -45,7 +45,7 @@ class TextClassification{
                             let boundingBox = observation.boundingBox
                                                     let x = boundingBox.origin.x * 100
                                                     let y = boundingBox.origin.y * 100
-                            let xString = String(format: "%.0f", x)
+                            let xString = String(format: "%.0f", y)
                             let xcordinatedArray = nextString.components(separatedBy: " ")
                             for data in xcordinatedArray {
                               var   datakk = data + "(" + xString.description + ")"
