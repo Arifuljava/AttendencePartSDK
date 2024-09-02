@@ -47,20 +47,37 @@ public class TimeDataManagement{
         maindata = datamanagement.sortDictionaryByKeys(dictionary: dictionary)
         return maindata
     }
+    func convertToTupleArray(dictionaryArray: [[String: [String]]]) -> [(key: String, value: [String])] {
+        var tupleArray: [(key: String, value: [String])] = []
+        
+        for dictionary in dictionaryArray {
+            for (key, value) in dictionary {
+                tupleArray.append((key: key, value: value))
+            }
+        }
+        
+        return tupleArray
+    }
 
     func createDateAndTimeGroup(groupsList: [[String: [String]]]) -> ([String: [String]], [String: [String]]) {
         var datelistrroup: [String: [String]] = [:]
         var timelistgroup: [String: [String]] = [:]
-
-        if !groupsList.isEmpty {
-            for (i, currentMap) in groupsList.enumerated() {
-                if let targetList = currentMap["\(i)"], !targetList.isEmpty {
-                    let formattedList = formatTimes(targetList)
-                    timelistgroup["\(i)"] = formattedList
-                }
+        let tupleArray = convertToTupleArray(dictionaryArray: groupsList)
+        let datamanagement = DataManagement()
+        let dictionary: [String: [String]] = Dictionary(uniqueKeysWithValues: tupleArray)
+       let timelistGroup = datamanagement.sortDictionaryByKeys(dictionary: dictionary)
+        var dict: [String: [String]] = Dictionary(uniqueKeysWithValues: timelistGroup)
+        var i = 0;
+        if !dict.isEmpty {
+            for (key, dateValueList) in dict {
+                guard let index = Int(key) else { continue }
+                var dateValueList = dateValueList
+                let formattedList = formatTimes(dateValueList)
+                timelistgroup["\(i)"] = formattedList
+                i = i + 1
+               
             }
         }
-
         return (datelistrroup, timelistgroup)
     }
     func formatTimes(_ originalList: [String]) -> [String] {
@@ -68,7 +85,6 @@ public class TimeDataManagement{
 
         for (i, item) in originalList.enumerated() {
             var word = ""
-
             if item.count > 2 {
                 if item.contains(":") {
                     let colons = countColons(item)
@@ -92,7 +108,6 @@ public class TimeDataManagement{
                                 word = replacedData(in:word)
                                 formattedList.append(word)
                             }
-                            
                             let startIndex = item.index(item.startIndex, offsetBy: colonIndex + 2)
                             let extractedSubstring = String(item[startIndex...])
                             var numbers = countNumbers(in: extractedSubstring)

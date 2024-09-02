@@ -10,10 +10,18 @@ import UIKit
 class ViewController: UIViewController, TextClassificationelegate {
     func canextractdata(extracttext: String, xcordinated: String) {
         print(extracttext)
-        
-         let timedataextractor = SecondDateManagement(extracttext: extracttext, xcordinated: xcordinated)
-         let finaltimelist = timedataextractor.processDate()
-         print(finaltimelist)
+      
+        let timedataextractor = FirstTimeManagement(extracttext: extracttext, xcordinated: xcordinated)
+        let finaltimelist = timedataextractor.processTime()
+        print("finaltimelist \(finaltimelist)")
+       
+         
+          /*
+           let dataextractor = SecondDateManagement(extracttext: extracttext, xcordinated: xcordinated)
+           let finaldatelist = dataextractor.processDate()
+         print("finaldatelist \(finaldatelist)")
+           */
+          
          
     }
     
@@ -35,7 +43,7 @@ class ViewController: UIViewController, TextClassificationelegate {
         
     }
     @IBAction func extract(_ sender: UIButton, forEvent event: UIEvent) {
-        if let image = UIImage(named: "8"),
+        if let image = UIImage(named: "2"),
            let cgImage = image.cgImage {
            textClassifier.recognizeText(from: cgImage);
         } else {

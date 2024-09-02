@@ -32,11 +32,13 @@ public class FirstTimeManagement{
                 let extractedTimes = datamanagement.extractTimeSequence(from: extracttext, using: sequence)
                 datalist[String(key)] = extractedTimes
             }
-            let convertedData: [[String: [String]]] = maindata.map { dict in
+           
+            let convertedData: [[String: [String]]] = datalist.map { dict in
                 return [dict.key: dict.value]
             }
             var (dateGroup, timeGroup) = timedatamanagement.createDateAndTimeGroup(groupsList: convertedData)
             timeGroup = timedatamanagement.removeNullDataFromTimeList(groupsList: [timeGroup])
+            print("sortedDictionary \(convertedData)")
             maindata.removeAll()
             maindata =  timedatamanagement.sortByKey(map: timeGroup)
             maindata =  timecheUnderContraction.checkingAlignment(timelistResult: maindata)
