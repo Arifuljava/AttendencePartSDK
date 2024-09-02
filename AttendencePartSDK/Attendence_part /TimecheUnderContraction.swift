@@ -194,8 +194,7 @@ public class TimecheUnderContraction{
             if datevalueList.count > 6 {
                 datevalueList = makesix(listtarget: datevalueList)
             }
-            print(datevalueList)
-            print(rangelist)
+            
             let validTimes = getValidTimes(datevalueList: datevalueList, rangelist: rangelist)
             if !validTimes.isEmpty {
                 timelistrroup.append((key: "\(i)", value: validTimes))

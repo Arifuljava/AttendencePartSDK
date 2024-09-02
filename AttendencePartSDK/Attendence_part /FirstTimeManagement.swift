@@ -19,7 +19,6 @@ public class FirstTimeManagement{
         }
         
         func processTime() -> [(key: String, value: [String])] {
-            print(extracttext)
             let xcordinatedArray = xcordinated.components(separatedBy: " ")
             let intArray = xcordinatedArray.compactMap { Int($0) }
             let detector = 3
@@ -38,7 +37,6 @@ public class FirstTimeManagement{
             }
             var (dateGroup, timeGroup) = timedatamanagement.createDateAndTimeGroup(groupsList: convertedData)
             timeGroup = timedatamanagement.removeNullDataFromTimeList(groupsList: [timeGroup])
-            print("sortedDictionary \(convertedData)")
             maindata.removeAll()
             maindata =  timedatamanagement.sortByKey(map: timeGroup)
             maindata =  timecheUnderContraction.checkingAlignment(timelistResult: maindata)

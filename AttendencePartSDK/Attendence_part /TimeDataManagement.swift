@@ -329,7 +329,6 @@ public class TimeDataManagement{
             if count > 1 {
                 extractDate = String(targetWord.dropFirst(1))
             } else {
-                print("KKIIIII \(targetWord): \(count)")
                 extractDate = String(targetWord.dropFirst(2)) + "0"
             }
         } else {

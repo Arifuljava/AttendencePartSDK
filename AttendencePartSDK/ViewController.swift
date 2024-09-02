@@ -10,25 +10,37 @@ import UIKit
 class ViewController: UIViewController, TextClassificationelegate {
     func canextractdata(extracttext: String, xcordinated: String) {
         print(extracttext)
-      
+        var finalResultFromSDK: [String] = []
+
         let timedataextractor = FirstTimeManagement(extracttext: extracttext, xcordinated: xcordinated)
         let finaltimelist = timedataextractor.processTime()
         print("finaltimelist \(finaltimelist)")
-       
-         
-          /*
+        print("finaldatelist \(finaltimelist.count)")
+        Thread.sleep(forTimeInterval: 2.0)
+    
            let dataextractor = SecondDateManagement(extracttext: extracttext, xcordinated: xcordinated)
            let finaldatelist = dataextractor.processDate()
          print("finaldatelist \(finaldatelist)")
-           */
-          
+        print("finaldatelist \(finaldatelist.count)")
          
+          
+        if finaltimelist.count == finaldatelist.count
+        {
+            let mergedResult = finalTask.mergeMaps(finaltimelist: finaltimelist, datelist:finaldatelist )
+            let stringArray = finalTask.convertToStringArray(from: mergedResult)
+            let finalResultList = finalTask.determinePercentages(finalResultWithPercentages: stringArray)
+            
+        }
+        else{
+            finalResultFromSDK.removeAll()
+            finalResultFromSDK.append("Please take image again")
+        }
     }
     
     func cannotgetdata() {
         print("VVVVVVV")
     }
-    
+    let finalTask = FinalTask()
     var datalist: [String: [String]] = [:]
     let textClassifier = TextClassification()
     let datamanagement = DataManagement()

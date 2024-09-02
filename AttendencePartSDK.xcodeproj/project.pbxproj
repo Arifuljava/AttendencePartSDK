@@ -24,6 +24,7 @@
 		25ED27D32C8457800004FCDF /* ExtractTextFromImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED27D22C8457800004FCDF /* ExtractTextFromImage.swift */; };
 		25ED27D52C8457980004FCDF /* DataManagement .swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED27D42C8457980004FCDF /* DataManagement .swift */; };
 		25ED27D72C8457D50004FCDF /* DateManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED27D62C8457D50004FCDF /* DateManagement.swift */; };
+		25FBC49A2C855ABB008B6289 /* FinalTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FBC4992C855ABB008B6289 /* FinalTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		25ED27D22C8457800004FCDF /* ExtractTextFromImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractTextFromImage.swift; sourceTree = "<group>"; };
 		25ED27D42C8457980004FCDF /* DataManagement .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManagement .swift"; sourceTree = "<group>"; };
 		25ED27D62C8457D50004FCDF /* DateManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManagement.swift; sourceTree = "<group>"; };
+		25FBC4992C855ABB008B6289 /* FinalTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				2518A4652C845961004EFC0C /* TimecheUnderContraction.swift */,
 				2518A4672C845A45004EFC0C /* FirstTimeManagement.swift */,
 				2518A4692C845A83004EFC0C /* SecondDateManagement.swift */,
+				25FBC4992C855ABB008B6289 /* FinalTask.swift */,
 			);
 			path = "Attendence_part ";
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				2518A4662C845961004EFC0C /* TimecheUnderContraction.swift in Sources */,
 				2518A46A2C845A83004EFC0C /* SecondDateManagement.swift in Sources */,
 				25ED27D32C8457800004FCDF /* ExtractTextFromImage.swift in Sources */,
+				25FBC49A2C855ABB008B6289 /* FinalTask.swift in Sources */,
 				2518A4642C84594B004EFC0C /* TimeDataManagement.swift in Sources */,
 				25ED27A12C8455200004FCDF /* ViewController.swift in Sources */,
 				2518A4682C845A45004EFC0C /* FirstTimeManagement.swift in Sources */,
