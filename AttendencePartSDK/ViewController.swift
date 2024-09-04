@@ -16,7 +16,7 @@ class ViewController: UIViewController, TextClassificationelegate {
         let finaltimelist = timedataextractor.processTime()
         print("finaltimelist \(finaltimelist)")
         print("finaldatelist \(finaltimelist.count)")
-        Thread.sleep(forTimeInterval: 2.0)
+       
     
            let dataextractor = SecondDateManagement(extracttext: extracttext, xcordinated: xcordinated)
            let finaldatelist = dataextractor.processDate()
@@ -26,9 +26,11 @@ class ViewController: UIViewController, TextClassificationelegate {
           
         if finaltimelist.count == finaldatelist.count
         {
+            
             let mergedResult = finalTask.mergeMaps(finaltimelist: finaltimelist, datelist:finaldatelist )
             let stringArray = finalTask.convertToStringArray(from: mergedResult)
             let finalResultList = finalTask.determinePercentages(finalResultWithPercentages: stringArray)
+            print("finalResultList   \(finalResultList)")
             
         }
         else{
@@ -55,7 +57,7 @@ class ViewController: UIViewController, TextClassificationelegate {
         
     }
     @IBAction func extract(_ sender: UIButton, forEvent event: UIEvent) {
-        if let image = UIImage(named: "2"),
+        if let image = UIImage(named: "5"),
            let cgImage = image.cgImage {
            textClassifier.recognizeText(from: cgImage);
         } else {
